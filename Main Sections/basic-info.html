@@ -6,13 +6,13 @@
     <title>Basic Information - Temple Guards</title>
     <link rel="stylesheet" href="../styles/styles.css">
 </head>
-<body>
+<body class="page-transition">
     <header>
         <nav>
             <ul class="main-sections">
                 <li><a href="../Main Sections/home.html">Home</a></li>
-                <li><a href="../Main Sections/basic-info.html"class="active">Basic Information</a></li>
-                <li><a href="../Main Sections/guard-info.html" >Guarding Information</a></li>
+                <li><a href="../Main Sections/basic-info.html" class="active">Basic Information</a></li>
+                <li><a href="../Main Sections/guard-info.html">Guarding Information</a></li>
                 <li><a href="../Main Sections/skill-mastery.html">Skill Mastery</a></li>
             </ul>
         </nav>
@@ -20,16 +20,64 @@
     <main>
         <h1>Basic Information</h1>
         <div class="sub-sections">
-            <a href="../basic-info/rules.html" class="sub-section">Rules & Punishments</a>
-            <a href="../basic-info/tg-events.html" class="sub-section">TG Events</a>
-            <a href="../basic-info/rank-structure.html" class="sub-section">Rank Structure</a>
-            <a href="../basic-info/shop.html" class="sub-section">Shop</a>
-            <a href="../basic-info/recommendations.html" class="sub-section">Recommendations</a>
-            <a href="../basic-info/oaths.html" class="sub-section">Oaths</a>
+            <a href="../basic-info/rules.html" class="sub-section">
+                <div class="tooltip">Learn about the rules and punishments in detail.</div>
+                Rules & Punishments
+            </a>
+            <a href="../basic-info/tg-events.html" class="sub-section">
+                <div class="tooltip">Explore upcoming and past events of the Temple Guards.</div>
+                TG Events
+            </a>
+            <a href="../basic-info/rank-structure.html" class="sub-section">
+                <div class="tooltip">Understand the rank structure and requirements.</div>
+                Rank Structure
+            </a>
+            <a href="../basic-info/shop.html" class="sub-section">
+                <div class="tooltip">Check out the items available in the shop.</div>
+                Shop
+            </a>
+            <a href="../basic-info/recommendations.html" class="sub-section">
+                <div class="tooltip">Get recommendations and tips.</div>
+                Recommendations
+            </a>
+            <a href="../basic-info/oaths.html" class="sub-section">
+                <div class="tooltip">Read about the oaths and their significance.</div>
+                Oaths
+            </a>
         </div>
     </main>
     <footer>
         <p>&copy; 2024 Temple Guards. All rights reserved.</p>
     </footer>
+    <button class="light-mode-toggle">Toggle Light Mode</button>
+    <div class="progress-tracking">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+    <script src="../scripts/global.js"></script>
+    <script>
+        // Page Transition Effect
+        document.addEventListener('DOMContentLoaded', () => {
+            document.body.classList.remove('page-transition-out');
+        });
+
+        // Light Mode Toggle
+        document.querySelector('.light-mode-toggle').addEventListener('click', () => {
+            document.body.classList.toggle('light-mode');
+        });
+
+        // Progress Tracking Example
+        function updateProgressBar() {
+            const progressBar = document.getElementById('progressBar');
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight;
+            const winHeight = window.innerHeight;
+            const scrollPercent = (scrollTop / (docHeight - winHeight)) * 100;
+            progressBar.style.width = scrollPercent + '%';
+        }
+
+        window.addEventListener('scroll', updateProgressBar);
+        window.addEventListener('resize', updateProgressBar);
+        updateProgressBar(); // Initial call
+    </script>
 </body>
 </html>

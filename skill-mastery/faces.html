@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faces - Temple Guards</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="main-sections">
+                <li><a href="../Main Sections/home.html" >Home</a></li>
+                <li><a href="../Main Sections/basic-info.html">Basic Information</a></li>
+                <li><a href="../Main Sections/guard-info.html">Guarding Information</a></li>
+                <li><a href="../Main Sections/skill-mastery.html"class="active">Skill Mastery</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>What is a Face?</h1>
+        <p>Temple Guard 'faces' are stationary commands that are accomplished without marching movements. These movements direct Temple Guards to the command of the speaker. Be careful to only obey the host if they use the proper format: 'Right face.' Unless otherwise directed, any command that does not follow that format is considered invalid.</p>
+        <ul>
+            <li><strong>Right face.</strong> - Turn 90° to the right.</li>
+            <li><strong>Left face.</strong> - Turn 90° to the left.</li>
+            <li><strong>Right incline.</strong> - Turn 45° to the right.</li>
+            <li><strong>Left incline.</strong> - Turn 45° to the left.</li>
+            <li><strong>About face.</strong> - Turn around, making a 180° turn.</li>
+            <li><strong>Center/Centre face.</strong> - Face the host's direction at the nearest 90° angle.</li>
+            <li><strong>Control face.</strong> - Follow the host’s movements. This command is broken by 'Center face.' and 'Lock.'</li>
+            <li><strong>Lock.</strong> - Do not follow upcoming commands. The command is broken by 'Center face.' and 'Unlock.'</li>
+            <li><strong>Unlock.</strong> - Disables the 'Lock.' command. Continue following given commands. If 'Control face.' is active when the 'Lock.' command was given, continue to track the host after unlocking.</li>
+        </ul>
+
+        <h2>Chains</h2>
+        <p>Chains are a set of subsequent commands given by a host. In order for a chain to be considered valid, all commands within the chain have to be properly formatted. If one command is incorrectly formatted, the entire chain is invalid. It is also important to look for faces such as 'center face' and 'control face' as they cancel out the previous commands, allowing the Temple Guard to start from that position. Below are examples of valid and invalid chains, some of which include special cases:</p>
+        <ul>
+            <li><strong>Right face, about face, left face, about face, right incline, about face.</strong> - This chain is VALID. When a Temple Guard finishes following the sequence, they should have turned to the right 225° from what would be considered 'Center face.'</li>
+            <li><strong>Left face, right face, about face, right face. left face.</strong> - This chain is INVALID. There is a period instead of a comma. A Temple Guard should not move when this chain command is given.</li>
+            <li><strong>Left face, right face, about face, center face, right incline.</strong> - This chain is VALID and contains a special circumstance. The commands: 'left face, right face, about face' do not need to be carried out by the Temple Guard because the 'center face' command follows them. When the sequence is complete, the Temple Guard will have turned to the right 45° from what would be considered "Center face."</li>
+            <li><strong>Left face, right face, about face, left incline, right face, about face, right incline, left face.</strong> - This chain is VALID. When a Temple Guard finishes the sequence, they should have turned 0° from what would be considered "Center face."</li>
+            <li><strong>Left face, right face, Left incline, right face, about face, right incline, left face.</strong> - This chain is INVALID. The command, "Left incline" should not be capitalized. The Temple Guard should not move when this chain command is given.</li>
+        </ul>
+
+        <!-- Image -->
+        <figure>
+            <img src="/images/FacesDemonstration.png" alt="Faces Instructions">
+            <figcaption>Instructions for various Temple Guard faces and chains.</figcaption>
+        </figure>
+    </main>
+    <footer>
+        <p>&copy; 2024 Temple Guards. All rights reserved.</p>
+    </footer>
+</body>
+</html>

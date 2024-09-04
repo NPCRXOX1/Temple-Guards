@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guarding Info - Temple Guards</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+        header {
+            margin-bottom: 20px;
+        }
+        .main-sections {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .main-sections li {
+            margin: 0 15px;
+        }
+        .main-sections li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 24px;
+        }
+        .active {
+            color: gold;
+        }
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background-color: #000;
+            color: #fff;
+        }
+        .guarding-info {
+            width: 100%;
+            max-width: 1200px;
+            text-align: center;
+        }
+        .guarding-info button {
+            margin: 5px;
+            padding: 10px;
+            border: none;
+            background: #333;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .guarding-info button.active {
+            background: gold;
+            color: #000;
+        }
+        .section-content {
+            margin-top: 20px;
+            display: none;
+        }
+        .section-content.active {
+            display: block;
+        }
+        .guarding-info img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="main-sections">
+                <li><a href="../Main Sections/home.html">Home</a></li>
+                <li><a href="../Main Sections/basic-info.html">Basic Information</a></li>
+                <li><a href="../Main Sections/guard-info.html" class="active">Guarding Info</a></li>
+                <li><a href="../Main Sections/skill-mastery.html">Skill Mastery</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="guarding-info">
+            <h2>Guarding Info</h2>
+            <div>
+                <button onclick="showSection('ilum')" id="btn-ilum">Ilum</button>
+                <button onclick="showSection('dantooine')" id="btn-dantooine">Dantooine</button>
+            </div>
+
+            <!-- Ilum Section -->
+            <div id="ilum" class="section-content">
+                <h3>Ilum Guarding Positions and Lines of Engagement</h3>
+                <p>4 Person Formation</p>
+                <ul>
+                    <li>Red - Kill hostiles</li>
+                    <li>Purple - Engage if allies are attacked</li>
+                    <li>Green - Chase in these areas if attacked first</li>
+                    <li>Orange - Guarding limit in casual lobby</li>
+                    <li>Black - Punished if passed</li>
+                </ul>
+                <p><strong>Rules for Engagement</strong></p>
+                <ul>
+                    <li>Temple Guards may not engage an enemy unless the hostile has passed the Kill on Sight line or has directly attacked a Jedi or a Temple Guard while close to the line.</li>
+                    <li>Temple Guards may chase an opponent who attacked first up to a certain point. See the figure above for more information.</li>
+                    <li>Temple Guards may not attack innocent players on the hostile team if they are exploring, unless they pass the Kill on Sight line.</li>
+                    <li>If a Host is commanding, Temple Guards may engage any non-neutral hostile who is within engagement boundaries.</li>
+                </ul>
+                <h5>Guarding Formations</h5>
+                <img src="path-to-ilum-formation1.jpg" alt="Ilum Formation 1">
+                <img src="path-to-ilum-formation2.jpg" alt="Ilum Formation 2">
+                <img src="path-to-ilum-formation3.jpg" alt="Ilum Formation 3">
+                <img src="path-to-ilum-formation4.jpg" alt="Ilum Formation 4">
+                <img src="path-to-ilum-formation5.jpg" alt="Ilum Formation 5">
+                <h5>Guarding Boundaries</h5>
+                <img src="path-to-ilum-boundary1.jpg" alt="Ilum Boundary 1">
+                <img src="path-to-ilum-boundary2.jpg" alt="Ilum Boundary 2">
+            </div>
+
+            <!-- Dantooine Section -->
+            <div id="dantooine" class="section-content">
+                <h3>Dantooine Guarding Positions</h3>
+                <p>1 Person Guarding Position</p>
+                <ul>
+                    <li>Blue - KOS</li>
+                    <li>Purple - Chase</li>
+                </ul>
+                <p><strong>Rules for Engagement</strong></p>
+                <ul>
+                    <li>Temple Guards may not engage an enemy unless the hostile has passed the Kill on Sight line or has directly attacked a Jedi or a Temple Guard while close to the line.</li>
+                    <li>Temple Guards may chase an opponent who attacked first up to a certain point. See the figure below for more information.</li>
+                    <li>Temple Guards may not attack innocent players on the hostile team if they are exploring, unless they pass the Kill on Sight line.</li>
+                    <li>If a Host is commanding, Temple Guards may engage any non-neutral hostile who is within engagement boundaries.</li>
+                </ul>
+                <h5>Guarding Formations</h5>
+                <img src="path-to-dantooine-formation1.jpg" alt="Dantooine Formation 1">
+                <img src="path-to-dantooine-formation2.jpg" alt="Dantooine Formation 2">
+                <img src="path-to-dantooine-formation3.jpg" alt="Dantooine Formation 3">
+                <img src="path-to-dantooine-formation4.jpg" alt="Dantooine Formation 4">
+                <img src="path-to-dantooine-formation5.jpg" alt="Dantooine Formation 5">
+                <img src="path-to-dantooine-formation6.jpg" alt="Dantooine Formation 6">
+                <h5>Guarding Boundaries</h5>
+                <img src="path-to-dantooine-boundary.jpg" alt="Dantooine Boundary">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Temple Guards. All rights reserved.</p>
+    </footer>
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.section-content').forEach(div => {
+                div.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+            
+            document.querySelectorAll('.guarding-info button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.getElementById('btn-' + sectionId).classList.add('active');
+        }
+
+        // Set initial visible section
+        showSection('ilum');
+    </script>
+</body>
+</html>
